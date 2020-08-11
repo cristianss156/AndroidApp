@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Whoapi</string>
+    <string name="textohint">hola, escribe algo</string>
+    <string name="botonhint">Pulsa</string>
+    <string name="background">Fondo</string>
+    <string name="tiempo">Tiempo</string>
+</resources>
