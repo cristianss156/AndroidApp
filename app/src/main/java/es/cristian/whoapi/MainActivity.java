@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         final RecyclerView recyclerView = findViewById(R.id.list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL,false));
-        doctorsAdapter=new DoctorsAdapter(new ArrayList<Doctor>());
+        doctorsAdapter=new DoctorsAdapter(new ArrayList<>());
         recyclerView.setAdapter(doctorsAdapter);
 
         doctorService.all()
@@ -135,12 +135,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(DoctorDetailActivity.newIntent(MainActivity.this, doctor));
-                }
-            });
+            holder.itemView.setOnClickListener(v -> startActivity(DoctorDetailActivity.newIntent(MainActivity.this, doctor)));
         }
 
         @Override
